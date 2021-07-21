@@ -20,7 +20,27 @@ We generally fold multiple commits pertaining to the same topic as a single entr
 - Read the `Breaking Changes` section (here in the changelog).
 - Please report any issue!
 
-## VERSION 0.8.x
+## VERSION 0.8.43
+
+### New
+* added `pan_button` keyword to plots #1083
+* added `pan_mod` keyword to plots #1083
+* added `fit_button` keyword to plots #1083
+* added `context_menu_button` keyword to plots #1083
+* added `box_select_button` keyword to plots #1083
+* added `box_select_mod` keyword to plots #1083
+* added `box_select_cancel_button` keyword to plots #1083
+* added `query_button` keyword to plots #1083
+* added `query_mod` keyword to plots #1083
+* added `query_toggle_mod` keyword to plots #1083
+* added `horizontal_mod` keyword to plots #1083
+* added `vertical_mod` keyword to plots #1083
+
+## VERSION 0.8.42
+
+### Fixes
+* fixed "double disabling" issue with text input #1084
+* fixed taskbar issues #1085
 
 ## VERSION 0.8.40
 

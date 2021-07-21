@@ -111,19 +111,19 @@ def add_double_value(*, label: str =None, id: int =0, source: int =0, user_data:
 	...
 
 def add_drag_float(*, label: str =None, id: int =0, width: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: float =0.0, format: str ='%0.3f', speed: float =1.0, min_value: float =0.0, max_value: float =100.0, no_input: bool =False, clamped: bool =False) -> int:
-	"""Adds drag for a single float value. CTRL+Click to directly modify the value."""
+	"""Adds drag for a single float value. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the drag. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_drag_floatx(*, label: str =None, id: int =0, width: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: List[float] =(0.0, 0.0, 0.0, 0.0), size: int =4, format: str ='%0.3f', speed: float =1.0, min_value: float =0.0, max_value: float =100.0, no_input: bool =False, clamped: bool =False) -> int:
-	"""Adds drag input for a set of int values up to 4. CTRL+Click to directly modify the value."""
+	"""Adds drag input for a set of int values up to 4. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the drag. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_drag_int(*, label: str =None, id: int =0, width: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: int =0, format: str ='%d', speed: float =1.0, min_value: int =0, max_value: int =100, no_input: bool =False, clamped: bool =False) -> int:
-	"""Adds drag for a single int value. CTRL+Click to directly modify the value."""
+	"""Adds drag for a single int value. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the drag. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_drag_intx(*, label: str =None, id: int =0, width: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: List[int] =(0, 0, 0, 0), size: int =4, format: str ='%d', speed: float =1.0, min_value: int =0, max_value: int =100, no_input: bool =False, clamped: bool =False) -> int:
-	"""Adds drag input for a set of int values up to 4. CTRL+Click to directly modify the value."""
+	"""Adds drag input for a set of int values up to 4. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the drag. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_drag_line(*, label: str =None, id: int =0, parent: int =0, before: int =0, source: int =0, callback: Callable =None, show: bool =True, user_data: Any =None, default_value: Any =0.0, color: List[int] =(0, 0, 0, -255), thickness: float =1.0, show_label: bool =True, vertical: bool =True) -> int:
@@ -362,7 +362,7 @@ def add_pie_series(x : float, y : float, radius : float, values : List[float], l
 	"""Adds a pie series to a plot."""
 	...
 
-def add_plot(*, label: str =None, id: int =0, width: int =0, height: int =0, indent: int =-1, parent: int =0, before: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, pos: List[int] =[], filter_key: str ='', delay_search: bool =False, tracked: bool =False, track_offset: float =0.5, user_data: Any =None, no_title: bool =False, no_menus: bool =False, no_box_select: bool =False, no_mouse_pos: bool =False, no_highlight: bool =False, no_child: bool =False, query: bool =False, crosshairs: bool =False, anti_aliased: bool =False, equal_aspects: bool =False) -> int:
+def add_plot(*, label: str =None, id: int =0, width: int =0, height: int =0, indent: int =-1, parent: int =0, before: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, pos: List[int] =[], filter_key: str ='', delay_search: bool =False, tracked: bool =False, track_offset: float =0.5, user_data: Any =None, no_title: bool =False, no_menus: bool =False, no_box_select: bool =False, no_mouse_pos: bool =False, no_highlight: bool =False, no_child: bool =False, query: bool =False, crosshairs: bool =False, anti_aliased: bool =False, equal_aspects: bool =False, pan_button: int =internal_dpg.mvMouseButton_Left, pan_mod: int =-1, fit_button: int =internal_dpg.mvMouseButton_Left, context_menu_button: int =internal_dpg.mvMouseButton_Right, box_select_button: int =internal_dpg.mvMouseButton_Right, box_select_mod: int =-1, box_select_cancel_button: int =internal_dpg.mvMouseButton_Left, query_button: int =internal_dpg.mvMouseButton_Middle, query_mod: int =-1, query_toggle_mod: int =internal_dpg.mvKey_Control, horizontal_mod: int =internal_dpg.mvKey_Alt, vertical_mod: int =internal_dpg.mvKey_Shift) -> int:
 	"""Adds a plot which is used to hold series, and can be drawn to with draw commands."""
 	...
 
@@ -423,15 +423,15 @@ def add_simple_plot(*, label: str =None, id: int =0, width: int =0, height: int 
 	...
 
 def add_slider_float(*, label: str =None, id: int =0, width: int =0, height: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: float =0.0, vertical: bool =False, no_input: bool =False, clamped: bool =False, min_value: float =0.0, max_value: float =100.0, format: str ='%.3f') -> int:
-	"""Adds slider for a single float value. CTRL+Click to directly modify the value."""
+	"""Adds slider for a single float value. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the slider. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_slider_floatx(*, label: str =None, id: int =0, width: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: List[float] =(0.0, 0.0, 0.0, 0.0), size: int =4, no_input: bool =False, clamped: bool =False, min_value: float =0.0, max_value: float =100.0, format: str ='%.3f') -> int:
-	"""Adds multi slider for up to 4 float values. CTRL+Click to directly modify the value."""
+	"""Adds multi slider for up to 4 float values. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the slider. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_slider_int(*, label: str =None, id: int =0, width: int =0, height: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: int =0, vertical: bool =False, no_input: bool =False, clamped: bool =False, min_value: int =0, max_value: int =100, format: str ='%d') -> int:
-	"""Adds slider for a single int value. CTRL+Click to directly modify the value."""
+	"""Adds slider for a single int value. Directly entry can be done with double click or CTRL+Click. Min and Max alone are a soft limit for the slider. Use clamped keyword to also apply limits to the direct entry modes."""
 	...
 
 def add_slider_intx(*, label: str =None, id: int =0, width: int =0, indent: int =-1, parent: int =0, before: int =0, source: int =0, payload_type: str ='$$DPG_PAYLOAD', callback: Callable =None, drag_callback: Callable =None, drop_callback: Callable =None, show: bool =True, enabled: bool =True, pos: List[int] =[], filter_key: str ='', tracked: bool =False, track_offset: float =0.5, user_data: Any =None, default_value: List[int] =(0, 0, 0, 0), size: int =4, no_input: bool =False, clamped: bool =False, min_value: int =0, max_value: int =100, format: str ='%d') -> int:
